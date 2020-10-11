@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Quando&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Judson&display=swap" rel="stylesheet">
+
+    <!--Font awesome-->
+    <script src="./fontawesome.js"></script>
+
+    <title>ECEA | TEAM</title>
+    <style type="text/css">
+        body {
+            overflow-x: hidden !important;
+        }
+
+        #navbar {
+            font-weight: bolder;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 10px 10px;
+            transition: 0.5s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            font-family: 'Judson', serif;
+            background-color: #9695EF;
+        }
+
+        h3 {
+            font-weight: bolder;
+        }
+
+        #navbar-brand {
+            transition: 0.5s;
+        }
+
+        #navbar a {
+            color: #000000;
+        }
+
+        #content {
+            margin-top: 100px;
+        }
+
+        p,h4 {
+            line-height: 23px;
+            font-family: 'Judson', serif;
+        }
+
+        h3 {
+            line-height: 30px;
+            font-family: 'Quando', serif;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            margin-bottom: 30px;
+        }
+        /*event poster css*/
+        .card {
+            border: none;
+        }
+
+        .light-grey {
+            color: #C0C0C0;
+        }
+        /*css for footer*/
+        footer {
+            font-family: 'Judson', serif;
+            line-height: 23px;
+            background-color: #9695EF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+            footer a {
+                color: #000000 !important;
+            }
+
+            footer i {
+                color: #000000;
+            }
+             .team{
+      margin: 75px 0;
+    }
+    h3{
+      text-align:center;
+      font-weight:bold;
+      letter-spacing:2px;
+      color: #333;
+      padding-bottom: 10px;
+    }
+    h3::after{
+      background: #333;
+      display: block;
+      height: 3px;
+      width: 150px;
+      margin: 10px auto;
+    }
+    .profile{
+      margin-top: 25px;
+    }
+    .profile .img-box
+    {
+      opacity: 1;
+      display: block;
+      position: relative;
+    }
+    .profile h3{
+      font-size: 19px;
+      font-weight: bold;
+      margin-top:15px;
+    }
+
+    .profile h4{
+      display: block;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    
+    .img-box ul{
+      margin: 0;
+      padding: 20px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      color:blue;
+
+    }
+    .img-box ul li{
+    display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: #fff;
+	color:#009688;
+	border-radius: 50%;
+	margin:0 2px;
+	text-align: center;
+	line-height: 32px;
+	font-size:16px;
+	transition: all .3s ease;
+    opacity: 1;
+    }
+
+    .img-box a{
+      color: #ffffff;
+    }
+    .img-box:hover::after{
+      opacity:1;
+    }
+    .img-box:hover ul{
+      opacity: 1;
+    }
+    .img-box a:hover li{
+      color:red;
+      transform: scale(0.9);
+    }
+   
+     .carousel-caption{
+          color: #000000;
+          text-align: right;
+        }
+   	#switchtab{ 
+	    padding-top: 50px;
+        padding-bottom: 30px;
+        font-family: 'Quando', serif;
+        
+		}
+
+    #switchtab .nav .active{
+        background-color:#9695EF;
+    }
+     #switchtab .nav .active{
+        color:#f1f1f1;
+    }
+    #switchtab .nav .nav-item{
+        color:black; 
+    }
+
+    #switchtab .nav-item:hover{
+    transform: scale(0.9);
+    background-color: rgb(17, 17, 136);
+    color:white;
+    }
+
+    .f-social {
+        font-size: 18px;
+        text-decoration: none !important;
+    }
+
+    .c-right{
+        color:#ffffff;
+        font-size: 20px;
+    }
+
+    .insta , .globe , .ln{
+        color:white;
+        padding-left: 7px;
+    }
+
+    .fa-quote-left{
+        color:green;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+            <a id="navbar-brand" class="navbar-brand" href="./ecea.html">ECEA</a>
+            <a class="navbar-brand mr-auto" href="../pages/ecea_events.html"><img src="../raic_logo1.png" height="40" width="41"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="./ecea.html">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="./ecea_events.html">EVENTS</a>
+                    <a class="nav-item nav-link active" href="#" style="color: #f8f8fa">BEARERS</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="position:relative; margin-top:120px; font-family: 'Judson', serif;">
+        <h2 class="text-center" style="font-size:25px; color: rgb(6, 124, 55);"><i class="fa fa-quote-left"></i>  Together we can do great things!</h2>
+    </div>
+    <div id="switchtab" class="container">
+        <div class="nav nav-pills justify-content-center" role="tablist">
+            <a class="nav-item nav-link active" data-toggle="tab" href="#officebearers" style="font-family: 'Quando', serif;">OFFICE BEARERS</a>
+            <a class="nav-item nav-link" href="#faculty" data-toggle="tab">FACULTY</a>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div id="officebearers" class="container tab-pane fade show active">
+            <div class="row justify-content-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 profile text-center justify-content-center ">
+                    <div class="img-box">
+                        <img src="../ecea_pics/piyushm.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/piyush0511"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Piyush M</h3>
+                    <p>PRESIDENT</p>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/anvita.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/anvita-ashokkumar-b33745192"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Anvita Ashokkumar</h3>
+                    <p>VICE-PRESIDENT</p>
+                </div>
+                <div class="col-sm-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/thejesh.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="#"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Thejesh</h3>
+                    <p>VICE-PRESIDENT</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/poojaR.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="http://www.linkedin.com/in/pooja-ramesh-b435a0185"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Pooja Ramesh</h3>
+                    <p>SECRETARY</p>
+                </div>
+                <div class="col-sm-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/niranjanS.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/niranjan-s-34966b190"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Niranjan.S</h3>
+                    <p>TREASURER</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/gokulR.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/gokul-rajan-ba6470199/"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>R.Gokul</h3>
+                    <p>JOINT SECRETARY</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/kishoreM.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/kishore-muthuselvan-6120a1192"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Kishore M</h3>
+                    <p>JOINT SECRETARY</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/subashree.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/subhashree-baskaran-5871061a6"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Subhashree.B</h3>
+                    <p>JOINT SECRETARY</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/amalan.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/amalan-valliappan-704094190"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Amalan Valliappan M P</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/fiona.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/fiona-justin-511706178"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Fiona J P J</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/kulandayan.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="http://linkedin.com/in/kulandaiyan-subramaniyan-9080b618a"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>S Kulandaiyan</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/reshmi.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/reshmi-jayarajan-a4b80a198"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Reshmi Jayarajan</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+                <div class="col-sm-6 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/srivarshini.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/srivarshini-a-4820901b6"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Srivarshini.A</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+                <div class="col-sm-12 col-md-4 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/vigneshM.png" class="img-responsive rounded-circle" width="230px" height="230px">
+                        <ul>
+                            <a href="https://www.linkedin.com/in/vigneshmb"><li><i class="fa fa-linkedin"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Vignesh M</h3>
+                    <p>EXECUTIVE MEMBER</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="faculty" class="container tab-pane fade">
+            <div class="row">
+                <div class="col-md-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/hod.jpg" class="img-responsive rounded-circle" width="240px" height="240px">
+                        <ul>
+                            <a href="https://www.svce.ac.in/profile-info/?id=4310"><li><i class="fa fa-info"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>Dr.S.Muthukumar</h3>
+                    <p>HEAD OF THE DEPARTMENT</p>
+                </div>
+                <div class="col-md-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/jpmam.png" class="img-responsive rounded-circle" width="240px" height="240px">
+                        <ul>
+                            <a href="https://www.svce.ac.in/profile-info/?id=5005"><li><i class="fa fa-info"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>TJ Jayaprabha</h3>
+                    <p>ASSISTANT PROFESSOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/loganathan.jpeg" class="img-responsive rounded-circle" width="240px" height="240px">
+                        <ul>
+                            <a href="https://www.svce.ac.in/profile-info/?id=4799"><li><i class="fa fa-info"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>G Loganathan</h3>
+                    <p>ASSISTANT PROFESSOR</p>
+                </div>
+                <div class="col-md-6 profile text-center justify-content-center">
+                    <div class="img-box">
+                        <img src="../ecea_pics/menaka.jpeg" class="img-responsive rounded-circle" width="240px" height="240px">
+                        <ul>
+                            <a href="https://www.svce.ac.in/profile-info/?id=5021"><li><i class="fa fa-info"></i> </li></a>
+                        </ul>
+                    </div>
+                    <h3>D Menaka</h3>
+                    <p>ASSISTANT PROFESSOR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+            <footer class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center f-social">
+                        <a href="https://www.instagram.com/eceasvce/" target="_blank"><i class="fa fa-instagram insta"></i>   Instagram </a>
+                        <a href="https://www.svce.ac.in/" target="_blank"><i class="fa fa-globe globe"></i>   Website </a>
+                        <a href="https://www.linkedin.com/groups/10419870/" target="_blank"><i class="fa fa-linkedin ln"></i>   LinkedIn</a><br><br>
+                        <p class="c-right">&copy All Rights Reserved</p>
+                    </div>
+            </footer>
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+            <script>
+                // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("navbar").style.padding = "5px 10px";
+                document.getElementById("navbar-brand").style.fontSize = "25px";
+                document.getElementById("navbar").style.fontSize = "16px";
+                } else {
+                document.getElementById("navbar").style.padding = "10px 10px";
+                document.getElementById("navbar-brand").style.fontSize = "35px";
+                document.getElementById("navbar").style.fontSize = "18px";
+                }
+                }
+            </script>
+</body>
+
+</html>
